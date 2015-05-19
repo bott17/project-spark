@@ -15,6 +15,10 @@
 			mySpark =  new Spark();
 		}
 		
+		function escuchar(event){
+			mySpark.escuchar(event);
+		}
+		
 	</script>
 	
 </head>
@@ -23,12 +27,12 @@
 	
 	
 	<div>
-		<h1>Bienvenido al proyecto Spark</h1>
+		<h1 id="titulo">Bienvenido al proyecto Spark</h1>
 		<h2>Spark esta iniciado y listo... Activa sus sensores auditivos para que te escuche</h2>
 	</div>
 	
 	<div>
-		<button id="startButton" onclick="mySpark.sayHello()">
+		<button id="startButton" onclick="escuchar(event)">
 			<img id="start_img" src="img/mic.gif">
 		</button>
 	</div>

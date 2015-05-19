@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Selector de zona</title>
+
+<head>
+	<script src="spark/spark.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		
+		var mySpark;
+		
+		
+		function startSpark(){
+			
+			mySpark =  new Spark();
+		}
+		
+		function escuchar(event){
+			mySpark.escuchar(event);
+		}
+		
+	</script>
+	
+</head>
+
+<body onload="startSpark()">
+	
+	
+	<div>
+		<h1 id="titulo">Bienvenido al proyecto Spark</h1>
+		<h2>Spark esta iniciado y listo... Activa sus sensores auditivos para que te escuche</h2>
+	</div>
+	
+	<div>
+		<button id="startButton" onclick="escuchar(event)">
+			<img id="start_img" src="img/mic.gif">
+		</button>
+	</div>
+	
+</body>

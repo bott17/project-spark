@@ -19,6 +19,22 @@
 			mySpark.escuchar(event);
 		}
 		
+		// Spark utiliza esta funcion para devolver los resultados
+		function resultadosSpark(palabras){
+			console.log("Resultado spark: " + palabras);
+			// Busqueda de las palbras de spark 
+			if(palabras.indexOf("Hola") != -1){
+				escuchaSpark.innerHTML = "hola Alvaro";
+			}
+			if(palabras.indexOf("Spark") != -1){
+				escuchaSpark.innerHTML += " Gracias";
+			}
+			else{
+				escuchaSpark.innerHTML = "";
+			}
+			
+		}
+		
 	</script>
 	
 </head>
@@ -35,6 +51,12 @@
 		<button id="startButton" onclick="escuchar(event)">
 			<img id="start_img" src="img/mic.gif">
 		</button>
+	</div>
+	
+	<div>
+		<h3>Spark escucha</h3>
+		<span id="escuchaSpark"></span>
+		<h3>Spark responde:</h3>
 	</div>
 	
 </body>

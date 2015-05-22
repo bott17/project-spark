@@ -22,15 +22,18 @@
 		// Spark utiliza esta funcion para devolver los resultados
 		function resultadosSpark(palabras){
 			console.log("Resultado spark: " + palabras);
+			
+			sparkEscucha.innerHTML = palabras;
+			
 			// Busqueda de las palbras de spark 
 			if(palabras.indexOf("Hola") != -1){
-				escuchaSpark.innerHTML = "hola Alvaro";
+				sparkResponde.innerHTML = "hola Alvaro";
 			}
 			if(palabras.indexOf("Spark") != -1){
-				escuchaSpark.innerHTML += " Gracias";
+				sparkResponde.innerHTML += " Gracias";
 			}
 			else{
-				escuchaSpark.innerHTML = "";
+				sparkResponde.innerHTML = "";
 			}
 			
 		}
@@ -55,8 +58,9 @@
 	
 	<div>
 		<h3>Spark escucha</h3>
-		<span id="escuchaSpark"></span>
+		<span id="sparkEscucha"></span>
 		<h3>Spark responde:</h3>
+		<span id="sparkResponde"></span>
 	</div>
 	
 </body>

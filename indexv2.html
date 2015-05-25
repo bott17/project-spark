@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+	
+	<script src="spark/sparkv2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	
+		function hablarConRetardo(){
+			var mySpark = new Spark("start_img");
+			
+			mySpark.hablar('frase uno');
+			mySpark.hablar('frase dos', function () {
+				alert('mensaje a la espera de que termine de hablar');
+			});
+		}
+		
+		function pregunta(){
+			var mySpark = new Spark("start_img");
+			
+			mySpark.pregunta("¿Que tal estas?", function (err, palabras){
+							
+				if (err) {
+					mySpark.hablar("No he detectado respuesta");
+				} 
+				else {
+					mySpark.hablar('Has respondido: ' + palabras);
+				}
+			});
+		}
+		
+		
+		
+	</script>
+</head>
+<body>
+	<button onclick="hablarConRetardo">Lanzar audio con retardo</button>
+	<button onclick="pregunta">Lanzar pregunta</button>
+	<img id="start_img" src="images/micro.gif" onclick="escuchar()"/>
+</body>
+</html>

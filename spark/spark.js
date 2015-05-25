@@ -66,6 +66,7 @@ if (!('webkitSpeechRecognition' in window)) {
     }
   };
 
+// TODO Utilizar callbacks... mira los favoritos
   recognition.onresult = function(event) {
     /*
     var interim_transcript = '';
@@ -85,7 +86,7 @@ if (!('webkitSpeechRecognition' in window)) {
         interim_transcript = event.results[i][0].transcript;
       }
     }
-    final_transcript = capitalize(final_transcript);
+   final_transcript = capitalize(final_transcript);
     console.log(final_transcript);
     
     resultadosSpark(final_transcript);

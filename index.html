@@ -21,10 +21,12 @@
 		
 		// Spark utiliza esta funcion para devolver los resultados
 		function resultadosSpark(palabras){
+			
 			console.log("Resultado spark: " + palabras);
 			
-			sparkEscucha.innerHTML = palabras;
+			var aux = palabras; 
 			
+			sparkEscucha.innerHTML = palabras;
 			// Busqueda de las palbras de spark 
 			if(palabras.indexOf("Hola") != -1){
 				sparkResponde.innerHTML = "hola Alvaro";
